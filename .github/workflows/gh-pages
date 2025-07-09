@@ -1,0 +1,8 @@
+git checkout --orphan gh-pages
+git rm -rf .
+cp index.html manifest.json sw.js .    # або залиш потрібні файли
+cp -r icons .                           # якщо треба іконки
+
+git add .
+git commit -m "Deploy PWA via gh-pages branch"
+git push origin gh-pages
